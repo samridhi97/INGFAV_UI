@@ -18,8 +18,8 @@ pipeline {
 	stage ('Deploy') {
 		steps {
 			sh '''
-             cp -r $WORKSPACE/build /opt/apache-tomcat-9.0.31/webapps
-             curl -u admin:admin http://3.133.113.126:8888/manager/reload?path=/build 
+             cp -r $WORKSPACE/build /opt/apache-tomcat-9.0.36/webapps
+             curl -u admin:admin http://3.14.133.237:8888/manager/reload?path=/build 
              '''
 		}
 	}
